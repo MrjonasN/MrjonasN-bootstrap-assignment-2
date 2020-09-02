@@ -1,6 +1,6 @@
 <template>
   <div class="upper-nav">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar nav-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <LanguageAndCurrency />
         <TopLinks />
@@ -21,16 +21,16 @@ export default {
 </script>
 
 <style>
-.navbar {
+.nav-top {
   padding: 0 1rem;
 }
 
-.navbar-dark {
+.nav-top {
   background: var(--theme-color) !important;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
+.upper-nav .nav-top li a {
+  color: white !important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {

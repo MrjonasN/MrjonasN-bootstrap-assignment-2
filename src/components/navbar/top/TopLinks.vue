@@ -1,5 +1,5 @@
 <template>
-  <div class="d-none d-sm-block">
+  <div class="d-none d-md-block">
     <ul class="navbar-nav flex-row justify-content-end">
       <li class="nav-item">
         <a class="nav-link border-right border-white px-3" href="#">Newsletter</a>
@@ -17,22 +17,22 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link px-2" href="#">
+        <a class="nav-link px-1" href="#">
           <i class="fab fa-instagram"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link px-2" href="#">
+        <a class="nav-link px-1" href="#">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link px-2" href="#">
+        <a class="nav-link px-1" href="#">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link px-2" href="#">
+        <a class="nav-link px-1" href="#">
           <i class="fab fa-youtube"></i>
         </a>
       </li>
