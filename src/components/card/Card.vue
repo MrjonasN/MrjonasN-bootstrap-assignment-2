@@ -1,43 +1,49 @@
 <template>
-  <div class="card d-inline-block card-product" style="width: 21rem;">
-    <span class="badge badge-primary badge-card-new">new</span>
-    <img src="../../assets/img/products/sleeved-top.svg" class="card-img-top" alt />
-    <div class="card-footer">
-      <p class="card-text text-white">Blue silk flare sleeved top</p>
-    </div>
+  <div class="item">
+    <div class="card d-inline-block card-product" style="width: 21rem;">
+      <span class="badge badge-primary badge-card-new">new</span>
+      <img src="../../assets/img/products/sleeved-top.svg" class="card-img-top" alt />
+      <div class="card-footer">
+        <p class="card-text text-white">{{ cardCarouselMockup.title }}</p>
+      </div>
 
-    <div class="overlay">
-      <div class="overlay-nav d-inline-block ml-auto">
-        <div class="d-flex flex-column align-items-center">
-          <div class="overlay-color pb-1">
-            <i class="fas fa-circle"></i>
-          </div>
-          <div class="overlay-heart py-1">
-            <img src="../../assets/img/nav/Heart-icon.svg" alt />
-          </div>
-          <div class="overlay-compare py-1">
-            <img src="../../assets/img/nav/Compare-icon.svg" alt />
-          </div>
-          <div class="overlay-search py-1">
-            <img src="../../assets/img/nav/search-icon-dark.svg" alt />
-          </div>
-          <div class="overlay-cart pt-1">
-            <img src="../../assets/img/nav/cart-icon.svg" alt />
+      <div class="overlay">
+        <div class="overlay-nav d-inline-block ml-auto">
+          <div class="d-flex flex-column align-items-center">
+            <div class="overlay-color pb-2">
+              <i class="fas fa-circle"></i>
+            </div>
+            <div class="overlay-heart py-2">
+              <img src="../../assets/img/nav/Heart-icon.svg" alt />
+            </div>
+            <div class="overlay-compare py-2">
+              <img src="../../assets/img/nav/Compare-icon.svg" alt />
+            </div>
+            <div class="overlay-search py-2">
+              <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+            </div>
+            <div class="overlay-cart pt-2">
+              <img src="../../assets/img/nav/cart-icon.svg" alt />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="overlay-text">
-        <p class="text-white overlay-info py-0 my-0">New look men's coat</p>
-        <button class="btn btn-outline-light btn-card-overlay my-2">Fashion</button>
-        <p class="text-white card-price py-0 my-0">$220.00</p>
-        <p class="card-current-price py-0 my-0">$190.00</p>
+        <div class="overlay-text">
+          <p class="text-white overlay-info py-0 my-0">{{ cardCarouselMockup.productInfo }}</p>
+          <button
+            class="btn btn-outline-light btn-card-overlay my-2"
+          >{{ cardCarouselMockup.category }}</button>
+          <p class="text-white card-price py-0 my-0">{{ cardCarouselMockup.oldPrice }}</p>
+          <p class="card-current-price py-0 my-0">{{ cardCarouselMockup.newPrice }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["cardCarouselMockup"],
+};
 </script>
 
 <style scoped>
@@ -95,7 +101,7 @@ export default {};
   right: 15px;
   background: #ffff;
   border-radius: 2rem;
-  padding: 1.3rem 0.7rem;
+  padding: 1.4rem 0.7rem;
 }
 
 .overlay-color i {
