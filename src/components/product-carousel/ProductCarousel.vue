@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <div id="slider" class="owl-carousel owl-theme" v-if="cardCarouselMockups">
+    <div class="owl-carousel owl-theme" v-if="cardCarouselMockups">
       <Card
         v-for="cardCarouselMockup in cardCarouselMockups"
         :key="cardCarouselMockup.id"
@@ -24,7 +24,8 @@ export default {
           id: 1,
           image: "../../assets/img/products/sleeved-top.svg",
           title: "Blue silk flare sleeved top",
-          badge: "new",
+          badge: "New",
+          badge2: '',
           productInfo: "New look men´s coat",
           category: "Fashion",
           oldPrice: "$220.00",
@@ -34,7 +35,8 @@ export default {
           id: 2,
           image: "../../assets/img/products/sleeved-top.svg",
           title: "Another great product",
-          badge: "new",
+          badge: "-25%",
+          badge2: '',
           productInfo: "New fresh look",
           category: "Fresh",
           oldPrice: "$500.00",
@@ -43,8 +45,9 @@ export default {
         {
           id: 3,
           image: "../../assets/img/products/sleeved-top.svg",
-          title: "Blue silk flare sleeved top",
-          badge: "new",
+          title: "Wow!",
+          badge: "Hot",
+          badge2: '',
           productInfo: "New look men´s coat",
           category: "Fashion",
           oldPrice: "$220.00",
@@ -54,7 +57,8 @@ export default {
           id: 4,
           image: "../../assets/img/products/sleeved-top.svg",
           title: "Another great product",
-          badge: "new",
+          badge: "New",
+          badge2: '-25%',
           productInfo: "New fresh look",
           category: "Fresh",
           oldPrice: "$500.00",
@@ -64,7 +68,8 @@ export default {
           id: 5,
           image: "../../assets/img/products/sleeved-top.svg",
           title: "Blue silk flare sleeved top",
-          badge: "new",
+          badge: "",
+          badge2: '',
           productInfo: "New look men´s coat",
           category: "Fashion",
           oldPrice: "$220.00",
@@ -74,7 +79,8 @@ export default {
           id: 6,
           image: "../../assets/img/products/sleeved-top.svg",
           title: "Another great product",
-          badge: "new",
+          badge: "Hot",
+          badge2: '',
           productInfo: "New fresh look",
           category: "Fresh",
           oldPrice: "$500.00",
@@ -107,7 +113,7 @@ export default {
 .owl-prev i,
 .owl-next i {
   font-size: 2.2rem;
-  padding: 1rem 1.3rem;
+  padding: 1rem 1.4rem;
   border: 2px solid #e3e3e3;
   border-radius: 50% !important;
 }

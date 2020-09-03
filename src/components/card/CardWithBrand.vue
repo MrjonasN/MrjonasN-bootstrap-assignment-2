@@ -1,21 +1,11 @@
 <template>
   <div class="item">
     <div class="card d-inline-block card-product" style="width: 21rem;">
-      <div v-if="cardCarouselMockup.badge !== ''" class="badge badge-primary"
-      :class="[
-      cardCarouselMockup.badge === 'New' ? 'blue' : '', 
-      cardCarouselMockup.badge === 'Hot' ? 'red' : '',
-      cardCarouselMockup.badge !== 'Hot' && cardCarouselMockup.badge !== 'New'  ? 'green' : '',
-      ]"
-      >
-        {{ cardCarouselMockup.badge }}
-        </div>
+      <div class="badge badge-primary">logo</div>
 
-      <div class="badge badge-primary green-badge-2">{{ cardCarouselMockup.badge2 }}</div>
-
-      <img src="../../assets/img/products/sleeved-top.svg" class="card-img-top" alt />
+      <img src="../../assets/img/products/men-coat.svg" class="card-img-top" alt />
       <div class="card-footer">
-        <p class="card-text text-white">{{ cardCarouselMockup.title }}</p>
+        <p class="card-text text-white">Mens denim shirt Full</p>
       </div>
 
       <div class="overlay">
@@ -39,12 +29,12 @@
           </div>
         </div>
         <div class="overlay-text">
-          <p class="text-white overlay-info py-0 my-0">{{ cardCarouselMockup.productInfo }}</p>
+          <p class="text-white overlay-info py-0 my-0">New Look. Just Wow!</p>
           <button
             class="btn btn-outline-light btn-card-overlay my-2"
-          >{{ cardCarouselMockup.category }}</button>
-          <p class="text-white card-price py-0 my-0">{{ cardCarouselMockup.oldPrice }}</p>
-          <p class="card-current-price py-0 my-0">{{ cardCarouselMockup.newPrice }}</p>
+          >Fresh</button>
+          <p class="text-white card-price py-0 my-0">$1000</p>
+          <p class="card-current-price py-0 my-0">$49</p>
         </div>
       </div>
     </div>
@@ -81,7 +71,7 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #FE4545;
+  background: #fe4545;
   padding: 1.3rem 0.8rem;
   border-radius: 50%;
   position: absolute;
@@ -93,8 +83,8 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #64CB83;
-  padding: 1.4rem .9rem;
+  background: #64cb83;
+  padding: 1.4rem 0.9rem;
   border-radius: 50%;
   position: absolute;
   top: 20px;
@@ -105,8 +95,8 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #64CB83;
-  padding: 1.4rem .9rem;
+  background: #64cb83;
+  padding: 1.4rem 0.9rem;
   border-radius: 50%;
   position: absolute;
   top: 85px;

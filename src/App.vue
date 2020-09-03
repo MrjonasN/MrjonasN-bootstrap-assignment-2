@@ -40,14 +40,23 @@ p {
   text-transform: uppercase;
   background-color: white;
   color: var(--theme-color);
+  font-size: 1.25rem;
   font-weight: 500;
   border: none;
-  border-radius: 1.7rem;
-  padding: .9rem 1.7rem;
+  border-radius: 2rem;
+  padding: 0.9rem 2rem;
 }
 
 .btn-white:hover {
   background-color: #fafafa !important;
   color: var(--theme-color);
+}
+
+.btn-dark-custom {
+  background: var(--dark-blue);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
 }
 </style>

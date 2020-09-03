@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .section-headline {
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
 .section-headline h2 {
