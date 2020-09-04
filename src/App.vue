@@ -36,6 +36,12 @@ p {
   color: var(--dark-blue);
 }
 
+.theme-color {
+  color: var(--theme-color)
+}
+
+/* BUTTONS */
+
 .btn-white {
   text-transform: uppercase;
   background-color: white;
@@ -58,5 +64,10 @@ p {
   font-weight: 500;
   padding: 0.9rem 2rem;
   border-radius: 2rem;
+}
+
+.btn-blog {
+  padding: 0rem 0.5rem;
+  border-radius: 0;
 }
 </style>

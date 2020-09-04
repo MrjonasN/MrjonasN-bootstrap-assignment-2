@@ -1,15 +1,15 @@
 <template>
   <div class="item">
     <div class="card d-inline-block card-product" style="width: 21rem;">
-      <div v-if="cardCarouselMockup.badge !== ''" class="badge badge-primary"
-      :class="[
+      <div
+        v-if="cardCarouselMockup.badge !== ''"
+        class="badge badge-primary"
+        :class="[
       cardCarouselMockup.badge === 'New' ? 'blue' : '', 
       cardCarouselMockup.badge === 'Hot' ? 'red' : '',
       cardCarouselMockup.badge !== 'Hot' && cardCarouselMockup.badge !== 'New'  ? 'green' : '',
       ]"
-      >
-        {{ cardCarouselMockup.badge }}
-        </div>
+      >{{ cardCarouselMockup.badge }}</div>
 
       <div class="badge badge-primary green-badge-2">{{ cardCarouselMockup.badge2 }}</div>
 
@@ -21,20 +21,58 @@
       <div class="overlay">
         <div class="overlay-nav d-inline-block ml-auto">
           <div class="d-flex flex-column align-items-center">
-            <div class="overlay-color pb-2">
+            <div class="overlay-color pb-2 tooltip-color-picker">
               <i class="fas fa-circle"></i>
+              <span class="tooltip-color-picker-text">
+                <i class="fas fa-circle circle-green"></i>
+                <i class="fas fa-circle circle-purple"></i>
+                <i class="fas fa-circle circle-red"></i>
+                <i class="fas fa-circle circle-black"></i>
+                </span>
             </div>
             <div class="overlay-heart py-2">
-              <img src="../../assets/img/nav/Heart-icon.svg" alt />
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Save product"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/Heart-icon.svg" alt />
+              </a>
             </div>
             <div class="overlay-compare py-2">
-              <img src="../../assets/img/nav/Compare-icon.svg" alt />
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Compare products"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/Compare-icon.svg" alt />
+              </a>
             </div>
             <div class="overlay-search py-2">
-              <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="More info"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+              </a>
             </div>
             <div class="overlay-cart pt-2">
-              <img src="../../assets/img/nav/cart-icon.svg" alt />
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Add to cart"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/cart-icon.svg" alt />
+              </a>
             </div>
           </div>
         </div>
@@ -52,12 +90,90 @@
 </template>
 
 <script>
+import tooltip from "../../assets/js/tooltip";
 export default {
   props: ["cardCarouselMockup"],
 };
 </script>
 
-<style scoped>
+<style>
+
+/* TOOLTIP */
+
+.tooltip-inner {
+  background-color: var(--theme-color) !important;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+#color-picker .tooltip-inner {
+  background-color: white !important;
+  color: black;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.bs-tooltip-left .arrow::before,
+.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: var(--theme-color) !important;
+  bottom: 10px;
+  left: 0px;
+}
+
+.tooltip-color-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-color-picker .tooltip-color-picker-text {
+  visibility: hidden;
+  width: 130px;
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: .42rem 0;
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  right: 190%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-color-picker .tooltip-color-picker-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.tooltip-color-picker:hover .tooltip-color-picker-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-color-picker-text > i {
+  padding: 0 .2rem;
+  margin-top: .2rem;
+}
+
+.tooltip-color-picker-text .circle-green { color: #82D8C6}
+.tooltip-color-picker-text .circle-purple { color: #CA82D8}
+.tooltip-color-picker-text .circle-red { color: #FE6C6C}  
+.tooltip-color-picker-text .circle-black { color: #333333}
+
+/* CARD */
+
 .card-product {
   background: #eeeeee;
   border: none;
@@ -81,7 +197,7 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #FE4545;
+  background: #fe4545;
   padding: 1.3rem 0.8rem;
   border-radius: 50%;
   position: absolute;
@@ -93,8 +209,8 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #64CB83;
-  padding: 1.4rem .9rem;
+  background: #64cb83;
+  padding: 1.4rem 0.9rem;
   border-radius: 50%;
   position: absolute;
   top: 20px;
@@ -105,8 +221,8 @@ export default {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: #64CB83;
-  padding: 1.4rem .9rem;
+  background: #64cb83;
+  padding: 1.4rem 0.9rem;
   border-radius: 50%;
   position: absolute;
   top: 85px;

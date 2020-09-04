@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 top-sellers mb-5">
+  <div class="container mt-5 top-sellers">
     <div class="row align-items-center">
       <div class="col-lg-6 col-md-12 offset-md-">
         <div class="card d-inline-block card-product card-product-big" style=";">
@@ -14,23 +14,61 @@
 
           <div class="overlay">
             <div class="overlay-nav d-inline-block ml-auto">
-              <div class="d-flex flex-column align-items-center">
-                <div class="overlay-color pb-2">
-                  <i class="fas fa-circle"></i>
-                </div>
-                <div class="overlay-heart py-2">
-                  <img src="../../assets/img/nav/Heart-icon.svg" alt />
-                </div>
-                <div class="overlay-compare py-2">
-                  <img src="../../assets/img/nav/Compare-icon.svg" alt />
-                </div>
-                <div class="overlay-search py-2">
-                  <img src="../../assets/img/nav/search-icon-dark.svg" alt />
-                </div>
-                <div class="overlay-cart pt-2">
-                  <img src="../../assets/img/nav/cart-icon.svg" alt />
-                </div>
-              </div>
+                       <div class="d-flex flex-column align-items-center">
+            <div class="overlay-color pb-2 tooltip-color-picker">
+              <i class="fas fa-circle"></i>
+              <span class="tooltip-color-picker-text">
+                <i class="fas fa-circle circle-green"></i>
+                <i class="fas fa-circle circle-purple"></i>
+                <i class="fas fa-circle circle-red"></i>
+                <i class="fas fa-circle circle-black"></i>
+                </span>
+            </div>
+            <div class="overlay-heart py-2">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Save product"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/Heart-icon.svg" alt />
+              </a>
+            </div>
+            <div class="overlay-compare py-2">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Compare products"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/Compare-icon.svg" alt />
+              </a>
+            </div>
+            <div class="overlay-search py-2">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="More info"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+              </a>
+            </div>
+            <div class="overlay-cart pt-2">
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="left"
+                title="Add to cart"
+                class="tooltip-primary"
+              >
+                <img src="../../assets/img/nav/cart-icon.svg" alt />
+              </a>
+            </div>
+          </div>
             </div>
             <div class="overlay-text">
               <p class="text-white overlay-info py-0 my-0">New Look. Just Wow!</p>
@@ -129,12 +167,61 @@
 </template>
 
 <script>
+import tooltip from "../../assets/js/tooltip";
 export default {
   components: {},
 };
 </script>
 
-<style>
+<style scoped>
+
+.tooltip-color-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-color-picker .tooltip-color-picker-text {
+  visibility: hidden;
+  width: 130px;
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: .42rem 0;
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  right: 190%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-color-picker .tooltip-color-picker-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.tooltip-color-picker:hover .tooltip-color-picker-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-color-picker-text > i {
+  padding: 0 .2rem;
+  margin-top: .2rem;
+}
+
+.tooltip-color-picker-text .circle-green { color: #82D8C6}
+.tooltip-color-picker-text .circle-purple { color: #CA82D8}
+.tooltip-color-picker-text .circle-red { color: #FE6C6C}  
+.tooltip-color-picker-text .circle-black { color: #333333}
+
 .card-product {
   background: #eeeeee;
   border: none;

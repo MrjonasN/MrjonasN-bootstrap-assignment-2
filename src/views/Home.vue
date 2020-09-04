@@ -12,6 +12,9 @@
     <FlashSaleBanner />
     <SectionHeadline :sectionHeadline="sectionHeadline.sellers" />
     <TopSellers />
+    <Testamonials />
+    <SectionHeadline :sectionHeadline="sectionHeadline.blog" />
+    <LatestBlog />
   </div>
 </template>
 
@@ -24,6 +27,8 @@ import ProductCarousel from "../components/product-carousel/ProductCarousel";
 import NewCustomerSaleBanner from "../components/new-customer-sale-banner/NewCustomerSaleBanner";
 import FlashSaleBanner from "../components/flash-sale-banner/FlashSaleBanner";
 import TopSellers from "../components/top-sellers/TopSellers";
+import Testamonials from '../components/testamonials/Testimonials'
+import LatestBlog from '../components/latest-blog/LatestBlog'
 
 export default {
   name: "Home",
@@ -32,10 +37,12 @@ export default {
     DeliveryAndShippingBox,
     SectionHeadline,
     ShopByCategory,
-    ProductCarousel,
+    ProductCarousel, 
     NewCustomerSaleBanner,
     FlashSaleBanner,
-    TopSellers
+    TopSellers,
+    Testamonials,
+    LatestBlog
   },
   data() {
     return {
@@ -60,6 +67,11 @@ export default {
           headline: "Top",
           headlineGreen: "Sellers",
           text: "Check out our weekly top sellers in all category",
+        },
+        blog: {
+          headline: "Latest",
+          headlineGreen: "Blog",
+          text: "Read our latest posts about our events and trending news",
         },
       },
     };

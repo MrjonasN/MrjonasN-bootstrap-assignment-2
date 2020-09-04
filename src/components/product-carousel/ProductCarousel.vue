@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <div class="owl-carousel owl-theme" v-if="cardCarouselMockups">
+    <div class="owl-carousel owl-product-carousel owl-theme" v-if="cardCarouselMockups">
       <Card
         v-for="cardCarouselMockup in cardCarouselMockups"
         :key="cardCarouselMockup.id"
