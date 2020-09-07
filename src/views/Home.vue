@@ -15,6 +15,7 @@
     <Testamonials />
     <SectionHeadline :sectionHeadline="sectionHeadline.blog" />
     <LatestBlog />
+    <SubscribeNow />
   </div>
 </template>
 
@@ -29,6 +30,7 @@ import FlashSaleBanner from "../components/flash-sale-banner/FlashSaleBanner";
 import TopSellers from "../components/top-sellers/TopSellers";
 import Testamonials from '../components/testamonials/Testimonials'
 import LatestBlog from '../components/latest-blog/LatestBlog'
+import SubscribeNow from '../components/subscribe-now/SubscribeNow'
 
 export default {
   name: "Home",
@@ -42,7 +44,8 @@ export default {
     FlashSaleBanner,
     TopSellers,
     Testamonials,
-    LatestBlog
+    LatestBlog,
+    SubscribeNow
   },
   data() {
     return {

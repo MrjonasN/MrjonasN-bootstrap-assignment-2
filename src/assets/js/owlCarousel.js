@@ -19,6 +19,7 @@ $(document).ready(function() {
       },
       1100: {
         items: 3,
+        autoplay: true
       },
     },
   });
@@ -43,6 +44,31 @@ $(".owl-testamonial-carousel").owlCarousel({
         nav: false,
       },
       900: {
+        nav: true,
+        autoplay: true
+      }
+    },
+  });
+
+$(".owl-blog-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1,
+    navText: [
+      '<i class="fa fa-chevron-left arrow-border" aria-hidden="true"></i>',
+      '<i class="fa fa-chevron-right arrow-border" aria-hidden="true"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        nav: false,
+      },
+      900: {
+        items: 2,
         nav: true,
         autoplay: true
       }
