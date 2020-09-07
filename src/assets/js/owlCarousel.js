@@ -19,7 +19,8 @@ $(document).ready(function() {
       },
       1100: {
         items: 3,
-        autoplay: true
+        autoplay: true,
+        autoplayHoverPause: true,
       },
     },
   });
@@ -45,7 +46,8 @@ $(".owl-testamonial-carousel").owlCarousel({
       },
       900: {
         nav: true,
-        autoplay: true
+        autoplay: true,
+        autoplayHoverPause: true,
       }
     },
   });
@@ -70,7 +72,8 @@ $(".owl-blog-carousel").owlCarousel({
       900: {
         items: 2,
         nav: true,
-        autoplay: true
+        autoplay: true,
+        autoplayHoverPause: true,
       }
     },
   });

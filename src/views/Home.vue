@@ -16,6 +16,7 @@
     <SectionHeadline :sectionHeadline="sectionHeadline.blog" />
     <LatestBlog />
     <SubscribeNow />
+    <BrandBanner />
   </div>
 </template>
 
@@ -31,6 +32,7 @@ import TopSellers from "../components/top-sellers/TopSellers";
 import Testamonials from '../components/testamonials/Testimonials'
 import LatestBlog from '../components/latest-blog/LatestBlog'
 import SubscribeNow from '../components/subscribe-now/SubscribeNow'
+import BrandBanner from '../components/brand-banner/BrandBanner'
 
 export default {
   name: "Home",
@@ -45,7 +47,8 @@ export default {
     TopSellers,
     Testamonials,
     LatestBlog,
-    SubscribeNow
+    SubscribeNow,
+    BrandBanner
   },
   data() {
     return {

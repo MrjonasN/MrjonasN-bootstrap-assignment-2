@@ -2,8 +2,8 @@
   <div>
     <UpperNav />
     <MiddleNav />
-
     <router-view />
+    <Footer />
   </div>
 </template>
 
@@ -11,11 +11,14 @@
 <script>
 import UpperNav from "./components/navbar/top/UpperNav";
 import MiddleNav from "./components/navbar/middle/MiddleNav";
+import Footer from "./components/footer/Footer";
+
 export default {
   name: "Home",
   components: {
     UpperNav,
     MiddleNav,
+    Footer,
   },
 };
 </script>
@@ -37,7 +40,7 @@ p {
 }
 
 .theme-color {
-  color: var(--theme-color)
+  color: var(--theme-color);
 }
 
 /* BUTTONS */
@@ -69,5 +72,19 @@ p {
 .btn-blog {
   padding: 0rem 0.5rem;
   border-radius: 0;
+}
+
+.btn-theme-color {
+  background: var(--theme-color);
+  color: white;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-theme-color:hover {
+  background: var(--theme-color);
+  color: #eeeeeeee;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
 }
 </style>

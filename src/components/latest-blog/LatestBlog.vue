@@ -1,5 +1,5 @@
 <template>
-  <div class="container latest-blog mt-5 mb-5">
+  <div class="container latest-blog mt-5">
     <div class="owl-carousel owl-blog-carousel owl-theme">
 
       <BlogCard />
