@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid container-delivery mt-5">
+  <div class="container-fluid container-delivery">
     <div class="d-flex justify-content-around flex-wrap">
       <div
         class="d-flex delivery-box rounded-lg align-items-center mb-4 mb-md-4"
@@ -89,6 +89,7 @@ export default {
 .container-delivery {
   max-width: 1800px;
   padding: 0 2rem;
+  margin-top: 7rem;
 }
 
 .delivery-box {

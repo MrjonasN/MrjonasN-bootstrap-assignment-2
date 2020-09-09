@@ -5,9 +5,10 @@
         <div class="col-lg-3 col-md-4 text-uppercase text-center flash-sale-banner">
           <h1 class="text-white">Flash sale</h1>
           <p class="text-white text-uppercase m-0 p-0">Up to 50% off</p>
-          <button
+          <router-link
+            to="/shop"
             class="mt-3 btn btn-dark btn-dark-custom text-uppercase d-md-none d-sm-inline"
-          >shop now</button>
+          >shop now</router-link>
         </div>
         <div class="col-lg-6 col-md-7 flash-sale-info d-none d-md-block">
           <div class="sale-stats d-flex justify-content-between">
@@ -36,7 +37,11 @@
               <p class="p-0 m-0">Seconds</p>
             </div>
           </div>
-          <button class="mt-5 btn btn-white d-block mx-auto">shop now</button>
+          <div class="col">
+            <div class="col-12 text-center">
+              <router-link to="/shop" class="text-center mt-5 btn btn-white mx-auto" role="button">shop now</router-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -51,7 +56,6 @@ export default {};
 .flash-banner {
   margin-top: 7rem;
   background: var(--dark-blue);
-  /* padding-bottom: 10rem; */
 }
 
 .flash-sale-banner {

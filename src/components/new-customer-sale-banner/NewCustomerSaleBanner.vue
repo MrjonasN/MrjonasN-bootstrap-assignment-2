@@ -8,7 +8,7 @@
             <span>off</span>
           </h1>
           <p class="text-white py-2">For new customers</p>
-          <button class="btn btn-dark btn-dark-custom text-uppercase">shop now</button>
+          <router-link to="/shop" class="btn btn-dark btn-dark-custom text-uppercase">shop now</router-link>
         </div>
         <div class="col-lg-5 col-md-6 new-customer-info d-none d-md-block">
           <p class="text-white pb-3">

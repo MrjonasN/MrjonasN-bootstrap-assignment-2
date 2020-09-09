@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Jumbotron />
+    <Jumbotron :jumbotron="jumbotron.home" />
     <DeliveryAndShippingBox />
     <SectionHeadline :sectionHeadline="sectionHeadline.category" />
     <ShopByCategory />
@@ -29,10 +29,10 @@ import ProductCarousel from "../components/product-carousel/ProductCarousel";
 import NewCustomerSaleBanner from "../components/new-customer-sale-banner/NewCustomerSaleBanner";
 import FlashSaleBanner from "../components/flash-sale-banner/FlashSaleBanner";
 import TopSellers from "../components/top-sellers/TopSellers";
-import Testamonials from '../components/testamonials/Testimonials'
-import LatestBlog from '../components/latest-blog/LatestBlog'
-import SubscribeNow from '../components/subscribe-now/SubscribeNow'
-import BrandBanner from '../components/brand-banner/BrandBanner'
+import Testamonials from "../components/testamonials/Testimonials";
+import LatestBlog from "../components/latest-blog/LatestBlog";
+import SubscribeNow from "../components/subscribe-now/SubscribeNow";
+import BrandBanner from "../components/brand-banner/BrandBanner";
 
 export default {
   name: "Home",
@@ -41,17 +41,28 @@ export default {
     DeliveryAndShippingBox,
     SectionHeadline,
     ShopByCategory,
-    ProductCarousel, 
+    ProductCarousel,
     NewCustomerSaleBanner,
     FlashSaleBanner,
     TopSellers,
     Testamonials,
     LatestBlog,
     SubscribeNow,
-    BrandBanner
+    BrandBanner,
   },
   data() {
     return {
+      jumbotron: {
+        home: {
+          headline: "Shopping is",
+          headlineGreen: "More fun",
+          fontSize: '3.75rem',
+          text: "Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque quis erat sed",
+          buttonText: "Shop now",
+          image: 'Banner-thumb.png',
+          background: '#eeeeee'
+        },
+      },
       sectionHeadline: {
         category: {
           headline: "Shop by",

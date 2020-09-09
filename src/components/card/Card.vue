@@ -23,12 +23,12 @@
           <div class="d-flex flex-column align-items-center">
             <div class="overlay-color pb-2 tooltip-color-picker">
               <i class="fas fa-circle"></i>
-              <span class="tooltip-color-picker-text">
+              <div class="tooltip-color-picker-text">
                 <i class="fas fa-circle circle-green"></i>
                 <i class="fas fa-circle circle-purple"></i>
                 <i class="fas fa-circle circle-red"></i>
                 <i class="fas fa-circle circle-black"></i>
-                </span>
+              </div>
             </div>
             <div class="overlay-heart py-2">
               <a
@@ -97,7 +97,6 @@ export default {
 </script>
 
 <style>
-
 /* TOOLTIP */
 
 .tooltip-inner {
@@ -137,16 +136,17 @@ export default {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: .42rem 0;
+  padding: 0.42rem 0;
   position: absolute;
   z-index: 1;
   top: -10px;
-  right: 190%;
+  right: 180%;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .tooltip-color-picker .tooltip-color-picker-text::after {
+  border: 1px solid red;
   content: "";
   position: absolute;
   top: 50%;
@@ -159,18 +159,27 @@ export default {
 
 .tooltip-color-picker:hover .tooltip-color-picker-text {
   visibility: visible;
+  display: block;
   opacity: 1;
 }
 
 .tooltip-color-picker-text > i {
-  padding: 0 .2rem;
-  margin-top: .2rem;
+  padding: 0 0.2rem;
+  margin-top: 0.2rem;
 }
 
-.tooltip-color-picker-text .circle-green { color: #82D8C6}
-.tooltip-color-picker-text .circle-purple { color: #CA82D8}
-.tooltip-color-picker-text .circle-red { color: #FE6C6C}  
-.tooltip-color-picker-text .circle-black { color: #333333}
+.tooltip-color-picker-text .circle-green {
+  color: #82d8c6;
+}
+.tooltip-color-picker-text .circle-purple {
+  color: #ca82d8;
+}
+.tooltip-color-picker-text .circle-red {
+  color: #fe6c6c;
+}
+.tooltip-color-picker-text .circle-black {
+  color: #333333;
+}
 
 /* CARD */
 

@@ -49,11 +49,11 @@ p {
   text-transform: uppercase;
   background-color: white;
   color: var(--theme-color);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   border: none;
   border-radius: 2rem;
-  padding: 0.9rem 2rem;
+  padding: 0.8rem 2rem;
 }
 
 .btn-white:hover {
