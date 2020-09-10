@@ -12,6 +12,7 @@
       </div>
       <div class="col-md-9">
         <ProductGrid />
+        <Pagination />
       </div>
     </div>
   </div>
@@ -26,7 +27,7 @@ import FilterByBrand from "../../components/filter-by-brand/FilterByBrand";
 import FilterByStatus from '../../components/filter-product-status/FilterProductStatus'
 import TopRatedProducts from '../../components/top-rated-products/TopRatedProducts'
 import ProductGrid from '../../components/product-grid/ProductGrid'
-// import Card from '../../components/card/Card'
+import Pagination from '../../components/pagination/Pagination'
 
 export default {
   components: {
@@ -38,7 +39,7 @@ export default {
     FilterByStatus,
     TopRatedProducts,
     ProductGrid,
-    // Card
+    Pagination
   },
  
 };
