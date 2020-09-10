@@ -15,7 +15,7 @@
 
       <img
       :src="require('@/assets/img/products/' + cardMockup.image)"
-      class="card-img-top img-fluid" alt />
+      class="card-img-top" alt />
       <div class="card-footer">
         <p class="card-text text-white">{{ cardMockup.title }}</p>
       </div>
