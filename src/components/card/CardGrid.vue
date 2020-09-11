@@ -107,17 +107,11 @@ export default {
 .overlay-grid-nav .tooltip-inner {
   background-color: var(--theme-color) !important;
   color: white;
-  /* padding: 0.4rem 0.9rem; */
-  /* margin: .8rem 0; */
-  /* margin-bottom: 1.2rem; */
-  /* margin-top: 0rem; */
 }
 
 #color-picker .tooltip-inner {
   background-color: white !important;
   color: black;
-  /* padding: 0.4rem 0.9rem; */
-  /* margin-bottom: .5rem; */
 }
 
 .tooltip.show {

@@ -263,6 +263,7 @@ export default {
 }
 
 /* OVERLAY */
+
 .overlay {
   position: absolute;
   bottom: 100%;
