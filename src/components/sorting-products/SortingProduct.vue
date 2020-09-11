@@ -2,6 +2,7 @@
   <div class="sorting-product-bg">
     <div class="container">
       <div class="row align-items-center">
+
         <div class="col-lg-2">
           <div class="shop-nav">
             <h5 class="theme-color">Shop</h5>
@@ -15,7 +16,7 @@
 
         <div class="col-lg-10">
           <div
-            class="shop-sorting mt-0 mt-md-3 d-flex flex-wrap justify-content-md-start justify-content-lg-end align-items-md-center"
+            class="shop-sorting mt-0 mt-md-3 mt-lg-0 d-flex flex-wrap justify-content-md-start justify-content-lg-end align-items-md-center"
           >
             <div
               class="sort-products-quantity mt-4 mt-md-0 mr-4 d-flex align-items-center px-4 py-3 text-white"
@@ -68,7 +69,7 @@ export default {};
 
 <style scoped>
 .sorting-product-bg {
-  margin-top: 7rem;
+  margin-top: 5rem;
   background: #f6f6f6;
   padding: 2rem 0;
 }

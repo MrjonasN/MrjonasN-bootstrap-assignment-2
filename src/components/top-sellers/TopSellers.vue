@@ -260,13 +260,13 @@ export default {
 @media (min-width: 992px) {
   .p-card-product-wide {
     padding: 0 9rem;
-    min-width: 117%;
+    min-width: 112%;
   }
 }
 
 @media (min-width: 1200px) {
   .p-card-product-wide {
-    min-width: 105%;
+    min-width: 102%;
   }
 }
 

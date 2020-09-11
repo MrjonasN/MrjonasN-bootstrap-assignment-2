@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-content-center mt-5">
     <nav aria-label="Page navigation example">
-      <ul class="pagination">
+      <ul class="pagination d-flex align-items-center">
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -51,8 +51,8 @@ export default {};
 }
 
 .page-link i {
-  font-size: 2.2rem;
-  padding: 1rem 1.4rem;
+  font-size: 2rem;
+  padding: .7rem 1rem;
   border: 2px solid #e3e3e3;
   border-radius: 50% !important;
   color: #E3E3E3;
@@ -63,10 +63,11 @@ export default {};
   border: transparent !important;
 }
 
+
 .page-link {
   position: relative;
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.5rem;
   margin-left: -1px;
   line-height: 1.25;
   color: black;

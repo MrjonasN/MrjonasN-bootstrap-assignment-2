@@ -21,7 +21,7 @@
       </div>
 
       <div class="overlay">
-        <div class="overlay-nav d-inline-block ml-auto">
+        <div class="overlay-nav overlay-nav-grid d-inline-block ml-auto">
           <div class="d-flex flex-column align-items-center">
             <div class="overlay-color pb-2 tooltip-color-picker">
               <i class="fas fa-circle"></i>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="overlay-text">
-          <p class="text-white overlay-info py-0 my-0">{{ cardMockup.productInfo }}</p>
+          <p class="text-white overlay-info overlay-info-grid py-0 my-0">{{ cardMockup.productInfo }}</p>
           <button
             class="btn btn-outline-light btn-card-overlay my-2"
           >{{ cardMockup.category }}</button>

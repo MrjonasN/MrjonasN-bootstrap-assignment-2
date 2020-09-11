@@ -94,7 +94,6 @@ export default {
 
 .delivery-box {
   background-color: rgba(32, 211, 193, 0.1);
-
   padding: 1.5rem 0rem;
   max-width: 350px;
 }
@@ -108,6 +107,24 @@ export default {
 @media (min-width: 992px) {
   .delivery-box {
     max-width: 340px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .delivery-box {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .delivery-box {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .delivery-box {
+    max-width: 330px;
   }
 }
 

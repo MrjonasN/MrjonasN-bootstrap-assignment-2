@@ -21,9 +21,9 @@
       </div>
 
       <div class="overlay">
-        <div class="overlay-nav d-inline-block ml-auto">
+        <div class="overlay-grid-nav d-inline-block ml-auto">
           <div class="d-flex flex-column align-items-center">
-            <div class="overlay-color pb-2 tooltip-color-picker">
+            <div class="overlay-color mb-1 tooltip-color-picker">
               <i class="fas fa-circle"></i>
               <div class="tooltip-color-picker-text">
                 <i class="fas fa-circle circle-green"></i>
@@ -32,7 +32,7 @@
                 <i class="fas fa-circle circle-black"></i>
               </div>
             </div>
-            <div class="overlay-heart py-2">
+            <div class="overlay-heart my-1">
               <a
                 href="#"
                 data-toggle="tooltip"
@@ -43,7 +43,7 @@
                 <img src="../../assets/img/nav/Heart-icon.svg" alt />
               </a>
             </div>
-            <div class="overlay-compare py-2">
+            <div class="overlay-compare my-1">
               <a
                 href="#"
                 data-toggle="tooltip"
@@ -54,7 +54,7 @@
                 <img src="../../assets/img/nav/Compare-icon.svg" alt />
               </a>
             </div>
-            <div class="overlay-search py-2">
+            <div class="overlay-search my-1">
               <a
                 href="#"
                 data-toggle="tooltip"
@@ -65,7 +65,7 @@
                 <img src="../../assets/img/nav/search-icon-dark.svg" alt />
               </a>
             </div>
-            <div class="overlay-cart pt-2">
+            <div class="overlay-cart mt-1">
               <a
                 href="#"
                 data-toggle="tooltip"
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="overlay-text">
-          <p class="text-white overlay-info py-0 my-0">{{ cardMockup.productInfo }}</p>
+          <p class="text-white overlay-info-grid py-0 my-0">{{ cardMockup.productInfo }}</p>
           <button
             class="btn btn-outline-light btn-card-overlay my-2"
           >{{ cardMockup.category }}</button>
@@ -101,18 +101,20 @@ export default {
 <style>
 /* TOOLTIP */
 
-.tooltip-inner {
+.overlay-grid-nav .tooltip-inner {
   background-color: var(--theme-color) !important;
   color: white;
-  padding: 0.4rem 0.9rem;
-  margin-bottom: 1.2rem;
+  /* padding: 0.4rem 0.9rem; */
+  /* margin: .8rem 0; */
+  /* margin-bottom: 1.2rem; */
+  /* margin-top: 0rem; */
 }
 
 #color-picker .tooltip-inner {
   background-color: white !important;
   color: black;
-  padding: 0.4rem 0.9rem;
-  margin-bottom: 1.2rem;
+  /* padding: 0.4rem 0.9rem; */
+  /* margin-bottom: .5rem; */
 }
 
 .tooltip.show {
@@ -249,6 +251,10 @@ export default {
 
 .card-footer {
   padding: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
 }
 
 /* OVERLAY */
@@ -269,13 +275,13 @@ export default {
   height: 100%;
 }
 
-.overlay-nav {
+.overlay-grid-nav {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #ffff;
+  top: 10px;
+  right: 10px;
+  background: white;
   border-radius: 2rem;
-  padding: 1.4rem 0.7rem;
+  padding: 1rem 0.5rem;
 }
 
 .overlay-color i {
@@ -289,9 +295,7 @@ export default {
   left: 15px;
 }
 
-.overlay-info {
-  font-size: 1.125rem;
-}
+
 
 .btn-card-overlay {
   padding: 0rem 0.5rem;

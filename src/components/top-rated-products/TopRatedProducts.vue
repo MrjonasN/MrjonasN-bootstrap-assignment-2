@@ -1,7 +1,7 @@
 <template>
   <div class="top-rated-products mt-4">
     <p class="filter-headline font-weight-bold theme-color mb-2">Top Rated Products</p>
-    <div class="product d-flex align-items-center mt-3">
+    <div class="product d-flex align-items-start mt-3">
         <div class="top-product-img">
             <img src="@/assets/img/products/product-thumbs/Product-thumb-shirt.svg" alt="">
         </div>
@@ -15,7 +15,7 @@
             <p class="font-weight-bold mb-0">$190</p>
         </div>
     </div>
-    <div class="product d-flex align-items-center mt-3">
+    <div class="product d-flex align-items-start mt-3">
         <div class="top-product-img">
             <img src="@/assets/img/products/product-thumbs/Product-thumb-shoes.svg" alt="">
         </div>
@@ -29,7 +29,7 @@
             <p class="font-weight-bold mb-0">$190</p>
         </div>
     </div>
-    <div class="product d-flex align-items-center mt-3">
+    <div class="product d-flex align-items-start mt-3">
         <div class="top-product-img">
             <img src="@/assets/img/products/product-thumbs/Product-thumb-watch.svg" alt="">
         </div>

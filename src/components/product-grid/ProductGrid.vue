@@ -1,7 +1,7 @@
 <template>
   <div class="product-grid">
     <div class="row justify-content-center justify-content-md-start justify-content-lg-center">
-      <Card
+      <CardGrid
         class="col-lg-4 col-md-6 card-grid mt-4 ml-md-4"
         v-for="cardMockup in cardMockups"
         :key="cardMockup.id"
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import Card from "../../components/card/Card";
+import CardGrid from "../../components/card/CardGrid";
 
 export default {
   components: {
-    Card,
+    CardGrid,
   },
   props: ["cardMockup"],
   data() {
@@ -174,4 +174,9 @@ export default {
     max-width: 15rem;
   }
 }
+
+.overlay-info-grid{
+  font-size: 1rem;
+}
+
 </style>

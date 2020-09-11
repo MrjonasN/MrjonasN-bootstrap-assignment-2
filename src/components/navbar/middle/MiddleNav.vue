@@ -5,10 +5,10 @@
         class="navbar nav-middle navbar-expand-lg navbar-light bg-light d-flex justify-content-md-between order-1 order-md-1"
       >
         <router-link to="/" class="navbar-brand m-0">
-          <img src="@/assets/img/logo/Logo.svg" alt="logo" />
+          <img src="@/assets/img/logo/Logo.svg" alt="logo" class="img-fluid" />
         </router-link>
 
-        <form class="form-inline order-3 order-md-2 flex-nowrap mt-4 mx-sm-auto">
+        <form class="form-inline order-3 order-md-2 flex-nowrap mt-3 mt-md-4 mx-sm-auto">
           <input
             class="form-control nav-search border-right-0"
             type="search"
@@ -55,7 +55,7 @@
               <span class="badge badge-pill badge-primary"></span>
             </a>
           </li>
-          <li class="nav-item mr-1 d-none d-sm-block">
+          <li class="nav-item mr-1">
             <a class="nav-link" href="#">
               <img src="@/assets/img/nav/Compare-icon.svg" alt="compare" />
               <span class="badge badge-pill badge-primary badge-compare">0</span>
@@ -72,11 +72,11 @@
       </nav>
     </div>
 
-    <div class="border-top d-none d-lg-block"></div>
+    <div class="border-top pb-2 pb-lg-0"></div>
 
     <nav class="navbar nav-bottom navbar-expand-lg navbar-light bg-link container py-0">
       <button
-        class="navbar-toggler ml-auto border-0"
+        class="navbar-toggler border-0 mb-2"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -84,7 +84,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="text-dark mr-3">Menu</span>
+        <!-- <span class="text-dark mr-3">Menu</span> -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -218,8 +218,22 @@ export default {};
 </script>
 
 <style scoped>
+.navbar-brand {
+  width: 35%;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    width: inherit;
+  }
+}
+
+.navbar-toggler-icon{
+    font-size: 1.3em;
+}
+
 .nav-middle {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   background: none !important;
 }
 
