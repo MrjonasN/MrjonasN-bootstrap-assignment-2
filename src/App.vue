@@ -49,7 +49,7 @@ p {
   text-transform: uppercase;
   background-color: white;
   color: var(--theme-color);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   border: none;
   border-radius: 2rem;
@@ -63,7 +63,7 @@ p {
 
 .btn-dark-custom {
   background: var(--dark-blue);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 0.9rem 2rem;
   border-radius: 2rem;

@@ -30,11 +30,16 @@
         </div>
         <div class="overlay-text">
           <p class="text-white overlay-info py-0 my-0">New Look. Just Wow!</p>
-          <button
-            class="btn btn-outline-light btn-card-overlay my-2"
-          >Fresh</button>
+          <button class="btn btn-outline-light btn-card-overlay my-2">Fresh</button>
           <p class="text-white card-price py-0 my-0">$1000</p>
           <p class="card-current-price py-0 my-0">$49</p>
+        </div>
+        <div class="card-ranking">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
         </div>
       </div>
     </div>
@@ -42,7 +47,6 @@
 </template>
 
 <script>
-
 export default {
   props: ["cardCarouselMockup"],
 };
@@ -170,5 +174,12 @@ export default {
   color: var(--theme-color);
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.card-ranking {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: var(--theme-color);
 }
 </style>

@@ -86,6 +86,13 @@
           <p class="text-white card-price py-0 my-0">{{ cardMockup.oldPrice }}</p>
           <p class="card-current-price py-0 my-0">{{ cardMockup.newPrice }}</p>
         </div>
+        <div class="card-ranking">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
       </div>
     </div>
   <!-- </div> -->
@@ -310,5 +317,12 @@ export default {
   color: var(--theme-color);
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.card-ranking {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: var(--theme-color);
 }
 </style>

@@ -1,93 +1,96 @@
 <template>
   <!-- <div class="item"> -->
-    <div class="card d-inline-block card-product">
-      <div
-        v-if="cardMockup.badge !== ''"
-        class="badge badge-primary"
-        :class="[
+  <div class="card d-inline-block card-product">
+    <div
+      v-if="cardMockup.badge !== ''"
+      class="badge badge-primary"
+      :class="[
       cardMockup.badge === 'New' ? 'blue' : '', 
       cardMockup.badge === 'Hot' ? 'red' : '',
       cardMockup.badge !== 'Hot' && cardMockup.badge !== 'New'  ? 'green' : '',
       ]"
-      >{{ cardMockup.badge }}</div>
+    >{{ cardMockup.badge }}</div>
 
-      <div class="badge badge-primary green-badge-2">{{ cardMockup.badge2 }}</div>
+    <div class="badge badge-primary green-badge-2">{{ cardMockup.badge2 }}</div>
 
-      <img
-      :src="require('@/assets/img/products/' + cardMockup.image)"
-      class="card-img-top" alt />
-      <div class="card-footer">
-        <p class="card-text text-white">{{ cardMockup.title }}</p>
-      </div>
+    <img :src="require('@/assets/img/products/' + cardMockup.image)" class="card-img-top" alt />
+    <div class="card-footer">
+      <p class="card-text text-white">{{ cardMockup.title }}</p>
+    </div>
 
-      <div class="overlay">
-        <div class="overlay-grid-nav d-inline-block ml-auto">
-          <div class="d-flex flex-column align-items-center">
-            <div class="overlay-color mb-1 tooltip-color-picker">
-              <i class="fas fa-circle"></i>
-              <div class="tooltip-color-picker-text">
-                <i class="fas fa-circle circle-green"></i>
-                <i class="fas fa-circle circle-purple"></i>
-                <i class="fas fa-circle circle-red"></i>
-                <i class="fas fa-circle circle-black"></i>
-              </div>
-            </div>
-            <div class="overlay-heart my-1">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Save product"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/Heart-icon.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-compare my-1">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Compare products"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/Compare-icon.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-search my-1">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="More info"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/search-icon-dark.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-cart mt-1">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Add to cart"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/cart-icon.svg" alt />
-              </a>
+    <div class="overlay">
+      <div class="overlay-grid-nav d-inline-block ml-auto">
+        <div class="d-flex flex-column align-items-center">
+          <div class="overlay-color mb-1 tooltip-color-picker">
+            <i class="fas fa-circle"></i>
+            <div class="tooltip-color-picker-text">
+              <i class="fas fa-circle circle-green"></i>
+              <i class="fas fa-circle circle-purple"></i>
+              <i class="fas fa-circle circle-red"></i>
+              <i class="fas fa-circle circle-black"></i>
             </div>
           </div>
-        </div>
-        <div class="overlay-text">
-          <p class="text-white overlay-info-grid py-0 my-0">{{ cardMockup.productInfo }}</p>
-          <button
-            class="btn btn-outline-light btn-card-overlay my-2"
-          >{{ cardMockup.category }}</button>
-          <p class="text-white card-price py-0 my-0">{{ cardMockup.oldPrice }}</p>
-          <p class="card-current-price py-0 my-0">{{ cardMockup.newPrice }}</p>
+          <div class="overlay-heart my-1">
+            <a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="left"
+              title="Save product"
+              class="tooltip-primary"
+            >
+              <img src="../../assets/img/nav/Heart-icon.svg" alt />
+            </a>
+          </div>
+          <div class="overlay-compare my-1">
+            <a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="left"
+              title="Compare products"
+              class="tooltip-primary"
+            >
+              <img src="../../assets/img/nav/Compare-icon.svg" alt />
+            </a>
+          </div>
+          <div class="overlay-search my-1">
+            <a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="left"
+              title="More info"
+              class="tooltip-primary"
+            >
+              <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+            </a>
+          </div>
+          <div class="overlay-cart mt-1">
+            <a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="left"
+              title="Add to cart"
+              class="tooltip-primary"
+            >
+              <img src="../../assets/img/nav/cart-icon.svg" alt />
+            </a>
+          </div>
         </div>
       </div>
+      <div class="overlay-text">
+        <p class="text-white overlay-info-grid py-0 my-0">{{ cardMockup.productInfo }}</p>
+        <button class="btn btn-outline-light btn-card-overlay my-2">{{ cardMockup.category }}</button>
+        <p class="text-white card-price py-0 my-0">{{ cardMockup.oldPrice }}</p>
+        <p class="card-current-price py-0 my-0">{{ cardMockup.newPrice }}</p>
+      </div>
+      <div class="card-ranking">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
     </div>
+  </div>
   <!-- </div> -->
 </template>
 
@@ -294,8 +297,6 @@ export default {
   bottom: 15px;
   left: 15px;
 }
-
-
 
 .btn-card-overlay {
   padding: 0rem 0.5rem;

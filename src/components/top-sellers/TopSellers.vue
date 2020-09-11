@@ -14,67 +14,74 @@
 
           <div class="overlay">
             <div class="overlay-nav d-inline-block ml-auto">
-                       <div class="d-flex flex-column align-items-center">
-            <div class="overlay-color pb-2 tooltip-color-picker">
-              <i class="fas fa-circle"></i>
-              <span class="tooltip-color-picker-text">
-                <i class="fas fa-circle circle-green"></i>
-                <i class="fas fa-circle circle-purple"></i>
-                <i class="fas fa-circle circle-red"></i>
-                <i class="fas fa-circle circle-black"></i>
-                </span>
-            </div>
-            <div class="overlay-heart py-2">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Save product"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/Heart-icon.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-compare py-2">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Compare products"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/Compare-icon.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-search py-2">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="More info"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/search-icon-dark.svg" alt />
-              </a>
-            </div>
-            <div class="overlay-cart pt-2">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="left"
-                title="Add to cart"
-                class="tooltip-primary"
-              >
-                <img src="../../assets/img/nav/cart-icon.svg" alt />
-              </a>
-            </div>
-          </div>
+              <div class="d-flex flex-column align-items-center">
+                <div class="overlay-color pb-2 tooltip-color-picker">
+                  <i class="fas fa-circle"></i>
+                  <span class="tooltip-color-picker-text">
+                    <i class="fas fa-circle circle-green"></i>
+                    <i class="fas fa-circle circle-purple"></i>
+                    <i class="fas fa-circle circle-red"></i>
+                    <i class="fas fa-circle circle-black"></i>
+                  </span>
+                </div>
+                <div class="overlay-heart py-2">
+                  <a
+                    href="#"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="Save product"
+                    class="tooltip-primary"
+                  >
+                    <img src="../../assets/img/nav/Heart-icon.svg" alt />
+                  </a>
+                </div>
+                <div class="overlay-compare py-2">
+                  <a
+                    href="#"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="Compare products"
+                    class="tooltip-primary"
+                  >
+                    <img src="../../assets/img/nav/Compare-icon.svg" alt />
+                  </a>
+                </div>
+                <div class="overlay-search py-2">
+                  <a
+                    href="#"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="More info"
+                    class="tooltip-primary"
+                  >
+                    <img src="../../assets/img/nav/search-icon-dark.svg" alt />
+                  </a>
+                </div>
+                <div class="overlay-cart pt-2">
+                  <a
+                    href="#"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="Add to cart"
+                    class="tooltip-primary"
+                  >
+                    <img src="../../assets/img/nav/cart-icon.svg" alt />
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="overlay-text">
               <p class="text-white overlay-info py-0 my-0">New Look. Just Wow!</p>
               <button class="btn btn-outline-light btn-card-overlay my-2">Fresh</button>
               <p class="text-white card-price py-0 my-0">$1000</p>
               <p class="card-current-price py-0 my-0">$49.00</p>
+            </div>
+            <div class="card-ranking">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
             </div>
           </div>
         </div>
@@ -118,6 +125,13 @@
                   <p class="text-white card-price py-0 my-0">$1000</p>
                   <p class="card-current-price py-0 my-0">$49.00</p>
                 </div>
+                <div class="card-ranking">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -157,6 +171,13 @@
                   <p class="text-white card-price py-0 my-0">$1000</p>
                   <p class="card-current-price py-0 my-0">$49.00</p>
                 </div>
+                <div class="card-ranking">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +195,6 @@ export default {
 </script>
 
 <style scoped>
-
 .tooltip-color-picker {
   position: relative;
   display: inline-block;
@@ -187,7 +207,7 @@ export default {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: .42rem 0;
+  padding: 0.42rem 0;
   position: absolute;
   z-index: 1;
   top: -10px;
@@ -213,14 +233,22 @@ export default {
 }
 
 .tooltip-color-picker-text > i {
-  padding: 0 .2rem;
-  margin-top: .2rem;
+  padding: 0 0.2rem;
+  margin-top: 0.2rem;
 }
 
-.tooltip-color-picker-text .circle-green { color: #82D8C6}
-.tooltip-color-picker-text .circle-purple { color: #CA82D8}
-.tooltip-color-picker-text .circle-red { color: #FE6C6C}  
-.tooltip-color-picker-text .circle-black { color: #333333}
+.tooltip-color-picker-text .circle-green {
+  color: #82d8c6;
+}
+.tooltip-color-picker-text .circle-purple {
+  color: #ca82d8;
+}
+.tooltip-color-picker-text .circle-red {
+  color: #fe6c6c;
+}
+.tooltip-color-picker-text .circle-black {
+  color: #333333;
+}
 
 .card-product {
   background: #eeeeee;
